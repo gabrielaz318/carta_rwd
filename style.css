@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital@0;1&display=swap');
+
+@keyframes botao {
+    0% {
+        background-color: #fdfdfd;
+        box-shadow: none;
+    }
+    100% {
+        background-color: #fff;
+        box-shadow:  7px 7px 60px #d9d9d9,
+                -7px -7px 60px #ffffff;
+    }
+}
+
+@keyframes lado {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes carta {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    font-family: 'KoHo', sans-serif;
+    cursor: default;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#pr {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#carta {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 110px auto;
+    padding: 40px;
+    height: 500px;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    animation: carta 2.3s forwards ease;
+}
+
+.data{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.p1, .p2 {
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.titulo {
+    font-size: 1rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.autor {
+    margin-left: 25px;
+    font-size: 1.2rem;
+}
+
+.link {
+    position: absolute;
+    z-index: 80;
+    bottom: 50px;
+    right: 80px;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+.link:hover {
+    cursor: pointer;
+    animation: botao 0.3s forwards ease-in-out;
+    border-radius: 25px;
+}
+
+.data{
+    animation: lado 1s forwards ease;
+}
+
+.titulo {
+    animation: lado 1.4s forwards ease;
+}
+
+.p1 {
+    animation: lado 1.6s forwards ease;
+}
+
+.p2 {
+    animation: lado 2.0s forwards ease;
+}
+
+.agrad {
+    animation: lado 2.0s forwards ease;
+}
+
+.autor {
+    animation: lado 2.0s forwards ease;
+}
+
+#div-ref {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.ref {
+    display: flex;
+    justify-content: center;
+}
